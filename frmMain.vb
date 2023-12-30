@@ -265,5 +265,21 @@ Public Class frmMain
         FillGrid(lblSourceFolders.Text)
     End Sub
 
+    Private Sub btnMakeAlbums_Click(sender As Object, e As EventArgs) Handles btnMakeAlbums.Click
+        Try
+            Dim oDialog As New FolderBrowserDialog()
+            Select Case oDialog.ShowDialog
+                Case DialogResult.OK
+                    If String.IsNullOrWhiteSpace(oDialog.SelectedPath) Then Throw New Exception("No folder selected")
+                    If Not IO.Directory.Exists(oDialog.SelectedPath) Then Throw New Exception("No folder exists")
+                    Dim sFolders() As String = IO.Directory.GetDirectories(oDialog.SelectedPath)
+
+            End Select
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
 End Class
 

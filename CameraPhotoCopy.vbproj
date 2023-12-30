@@ -86,6 +86,7 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BridgeUtilities.vb" />
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>

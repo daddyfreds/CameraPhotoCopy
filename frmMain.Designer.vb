@@ -32,6 +32,7 @@ Partial Class frmMain
         Me.grdCopyPhotos = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.lblSourceFolders = New System.Windows.Forms.Label()
+        Me.btnMakeAlbums = New System.Windows.Forms.Button()
         CType(Me.grdCopyPhotos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,7 +69,7 @@ Partial Class frmMain
         'txtDestinationPath
         '
         Me.txtDestinationPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDestinationPath.Location = New System.Drawing.Point(109, 402)
         Me.txtDestinationPath.Name = "txtDestinationPath"
         Me.txtDestinationPath.Size = New System.Drawing.Size(694, 20)
@@ -98,8 +99,8 @@ Partial Class frmMain
         Me.grdCopyPhotos.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None
         Me.grdCopyPhotos.AllowSorting = C1.Win.C1FlexGrid.AllowSortingEnum.None
         Me.grdCopyPhotos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdCopyPhotos.ColumnInfo = resources.GetString("grdCopyPhotos.ColumnInfo")
         Me.grdCopyPhotos.Cursor = System.Windows.Forms.Cursors.Default
         Me.grdCopyPhotos.ExtendLastCol = True
@@ -132,11 +133,21 @@ Partial Class frmMain
         Me.lblSourceFolders.TabIndex = 47
         Me.lblSourceFolders.Text = "Label3"
         '
+        'btnMakeAlbums
+        '
+        Me.btnMakeAlbums.Location = New System.Drawing.Point(109, 432)
+        Me.btnMakeAlbums.Name = "btnMakeAlbums"
+        Me.btnMakeAlbums.Size = New System.Drawing.Size(167, 23)
+        Me.btnMakeAlbums.TabIndex = 48
+        Me.btnMakeAlbums.Text = "Make Albums From Folders"
+        Me.btnMakeAlbums.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(883, 467)
+        Me.Controls.Add(Me.btnMakeAlbums)
         Me.Controls.Add(Me.lblSourceFolders)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.grdCopyPhotos)
@@ -164,5 +175,5 @@ Partial Class frmMain
     Friend WithEvents grdCopyPhotos As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents btnRefresh As System.Windows.Forms.Button
     Friend WithEvents lblSourceFolders As System.Windows.Forms.Label
-
+    Friend WithEvents btnMakeAlbums As Button
 End Class
