@@ -273,7 +273,15 @@ Public Class frmMain
                     If String.IsNullOrWhiteSpace(oDialog.SelectedPath) Then Throw New Exception("No folder selected")
                     If Not IO.Directory.Exists(oDialog.SelectedPath) Then Throw New Exception("No folder exists")
                     Dim sFolders() As String = IO.Directory.GetDirectories(oDialog.SelectedPath)
-
+                    Dim lstCollections As New List(Of Bridge.Collection)
+                    For Each sFolder As String In sFolders
+                        Dim oCollection As New Bridge.Collection
+                        For Each sFile As String In IO.Directory.GetFiles(sFolder, "*.*")
+                            Dim sResult() As String = Bridge.utilities.FindPictureInLibrary(sFile, My.Settings.LocalDestinationFolder)
+                            'todo: validation to make sure it has exactly 1, if not , report error
+                            oCollection.Files.Add(New Bridge.Collection.File() With {.Path = sResult(0)})
+                        Next
+                    Next
             End Select
         Catch ex As Exception
             MsgBox(ex.Message)
