@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ImportFolders" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\Temp\photos</Value>
+    </Setting>
+    <Setting Name="LocalDestinationFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\Temp\TargetPhotos</Value>
+    </Setting>
+    <Setting Name="PhotoTooOldInDays" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="LogFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\Temp\Logs</Value>
+    </Setting>
+    <Setting Name="FileTypesToImport" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">*.jpg|*.mp4|*.mov|*.mts|*.3gp|*.mpg</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
